@@ -1,7 +1,6 @@
 // vim: set colorcolumn=85
 // vim: fdm=marker
 
-#include "koh.h"
 #include "koh_table.h"
 #include "munit.h"
 #include <assert.h>
@@ -141,5 +140,6 @@ static const MunitSuite test_suite = {
 };
 
 int main(int argc, char **argv) {
+    koh_hashers_init();
     return munit_suite_main(&test_suite, (void*) "µnit", argc, argv);
 }
